@@ -1,0 +1,12 @@
+{% extends 'students/base.html' %}
+{% block content %}
+
+<h3>{{ view.action|default:"Add Student" }}</h3>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" style="padding: 5px 10px;">Save</button>
+</form>
+
+{% endblock %}

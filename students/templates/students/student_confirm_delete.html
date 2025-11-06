@@ -1,0 +1,13 @@
+{% extends 'students/base.html' %}
+{% block content %}
+
+<h3>Delete Student</h3>
+
+<p>Are you sure you want to delete <strong>{{ object.name }}</strong>?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" style="padding: 5px 10px;">Confirm Delete</button>
+</form>
+
+{% endblock %}
